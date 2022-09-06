@@ -1,1 +1,1 @@
-Shell Project
+SHELL,INIT FILES,var EXP
