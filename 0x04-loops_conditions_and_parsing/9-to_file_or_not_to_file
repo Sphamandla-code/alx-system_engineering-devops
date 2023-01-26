@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# script displaying "best School" 10 times
 file_h="school"
 
 if [ -e "$file_h" ]

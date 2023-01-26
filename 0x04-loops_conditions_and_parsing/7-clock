@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
+# script displaying hours
 i=1
 j=0
 while [ "$j" -le 12 ]
