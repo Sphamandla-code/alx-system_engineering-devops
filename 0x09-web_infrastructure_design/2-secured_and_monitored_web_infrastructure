@@ -1,0 +1,19 @@
+The firewalls are for protecting the network from unauthorized processes by acting as an intermediary between the internal network and the external network and blocking the incoming traffic matching the aforementioned criteria.
+
+
+The SSL certificate ensure privacy, integrity, and identification by encrypting the traffic between the web servers and the external network to prevent man-in-the-middle attacks and network sniffing.
+
+
+The monitoring clients are for monitoring the servers and the external network, analysing the performance and operations of the servers, measure the overall health, and alert the administrators if the servers are not performing as expected.
+
+
+
+***************************************
+   Issues With This Infrastructure
+***************************************
+
+Terminating SSL at the load balancer level would leave the traffic between the load balancer and the web servers unencrypted.
+
+Having one MySQL server is an issue because it is not scalable and can act as a single point of failure for the web infrastructure.
+
+having servers with the same componets installed means that if one server is attacked successfully all the other servers would also be expossed to that same attack.

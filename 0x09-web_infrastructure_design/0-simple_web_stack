@@ -1,0 +1,23 @@
+1.A server is a computer hardware or software that provides functionality for other programs or devices (clients).
+
+2. A Domain name helps identify Internet resources (network) with a text-based label that is easier to memorize than the numerical addresses (IP Address).
+
+3. DNS record www in www.foobar.com uses an A record
+
+4. A web server accepts requests via HTTP or HTTPS and responds with the content requested or an error messsage.
+
+5. An Application server operate and host applications and associated services for end users
+
+6. Database server maintains a collection of organized information that can easily be accessed, managed and updated
+
+7. Communication between the client and the server occurs over the internet network through the TCP/IP protocol suite
+
+***************************************
+   Issues With This Infrastructure
+***************************************
+
+SPOF - only one of all the componets are installed this would means if that point stops working them the whole website would fail.
+
+maintenance downtime - during maintenance the whole server would go down and the website would be unreacheable because there are no backup servers that would run while the main server is under maintenance.
+
+scaleable - because the is one server running many programs or the server receiving too many request can slow it down.
