@@ -7,6 +7,8 @@ global
 	user haproxy
 	group haproxy
 	daemon
+	maxconn 2048
+	tune.ssl.default-dh-param 2048
 
 	# Default SSL material locations
 	ca-base /etc/ssl/certs
@@ -32,15 +34,26 @@ defaults
 	errorfile 502 /etc/haproxy/errors/502.http
 	errorfile 503 /etc/haproxy/errors/503.http
 	errorfile 504 /etc/haproxy/errors/504.http
+	option forwardfor
+	option http-server-close
 
 #--meruem.tech-params-begin--
 backend meruem.tech-backend
 	balance roundrobin
 	server 126497-web-01 54.144.199.152:80 check
 	server 126497-web-02 54.237.123.22:80 check
+backend www-backend
+	redirect scheme https if !{ ssl_fc }
+	server 126497-web-01 54.144.199.152:80 check
+	server 126497-web-02 54.237.123.22:80 check
+backend letsencrypt-backend
+	server letsencrypt 127.0.0.1:54321
 frontend meruem.tech-frontend
 	bind *:80
 	mode http
 	default_backend meruem.tech-backend
+frontend www-https
+	bind *:443 ssl crt /etc/haproxy/certs/meruem.tech.pem
+	default_backend www-backend
 #--meruem.tech-params-end--
 
