@@ -1,8 +1,6 @@
 #!/usr/bin/python3
 """
 Using https://jsonplaceholder.typicode.com
-gathers data from API and exports it to CSV file
-Implemented using recursion
 """
 import re
 import requests

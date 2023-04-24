@@ -1,8 +1,6 @@
 #!/usr/bin/python3
 """
-Using https://jsonplaceholder.typicode.com
 returns info about employee TODO progress
-Implemented using recursion
 """
 import re
 import requests
