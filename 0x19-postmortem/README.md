@@ -40,7 +40,7 @@ We're grateful for your patience during the outage. We're committed to providing
 
 Diagram:
 ---------
-
+![images](https://github.com/Sphamandla-code/alx-system_engineering-devops/assets/65688263/9f24e71a-4b8f-4f2c-bf06-18269ed72c31)
 
 Humour:
 --------
